@@ -9,8 +9,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: fwilhe2/bump-version@wip2
-      id: v
-    - run: echo ${{ steps.v.outputs.newVersion }}
+      id: bump
+    - run: echo ${{ steps.bump.outputs.newVersion }}
     - uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
